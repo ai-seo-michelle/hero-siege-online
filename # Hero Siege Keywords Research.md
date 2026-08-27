@@ -1,0 +1,401 @@
+# Hero Siege Keywords Research
+
+## 1. Google 下拉词
+
+### 核心词
+- hero siege
+
+### 下拉词
+-herosiege攻略
+-hero siege
+-Hero Siege视频游戏
+-hero siege season 10 release date
+-hero siege season 9 tier list
+-hero siege builds
+-hero siege season 10
+-hero siege discord
+-hero siege classes
+-hero siege tier list
+
+---
+
+## 2. Google Trends 相关词
+
+### 热门相关词
+- hero siege season
+-hero siege season 10
+-build hero siege
+-hero siege build
+-hero siege builds
+-hero siege s10
+-hero siege tier list
+-hero siege filter
+-hero siege items
+-hero siege guide
+-steam
+-hero siege steam
+-steam hero siege
+-hero siege ether
+-hero siege loot filter
+-hero siege key
+-hero siege reddit
+-hero siege season 10 tier list
+-reddit hero siege
+-hero siege map
+-hero siege gold
+-hero siege builds season 10
+-hero siege season 10 builds
+-hero siege classes
+-hero siege patch notes
+-hero siege discord
+-graxy hero siege
+-graxy
+-hero siege mercenary
+-hero siege ether tree
+-ether tree hero siege
+-hero siege new season
+-hero siege helper
+-hero siege wiki
+-hero siege ether points
+-hero siege quests
+-sleepycat
+-herosiege
+-hero siege unlock hell
+-hero siege market
+-sleepycat hero siege
+-hero siege runewords
+-hero siege guild
+-hero siege season 10 release date
+-hero siege maggot stew
+-sleepy cat
+-damien hero siege
+-hero siege season 10 patch notes
+-hero siege guides
+-hero siege best class
+
+### 搜索量上升词
+- hero siege s10
+-hero siege season 10 tier list
+-hero siege builds season 10
+-hero siege season 10 builds
+-graxy hero siege
+-graxy
+-hero siege mercenary
+-hero siege ether tree
+-ether tree hero siege
+-hero siege ether points
+-hero siege quests
+-sleepycat
+-hero siege unlock hell
+-sleepycat hero siege
+-hero siege runewords
+-hero siege guild
+-hero siege maggot stew
+-sleepy cat
+-damien hero siege
+-hero siege season 10 patch notes
+-hero siege guides
+-hero siege hunger issue
+-hunger issue hero siege
+-hero siege soulforged ring
+-soulforged ring hero siege
+-hero siege relics
+-hero siege blood pact
+-hero siege how to unlock hell
+-gurag hero siege
+-hero siege loot filter season 10
+-hero siege act 8
+-hero siege tracker
+-hero siege incarnation tree
+-hero siege odyssey
+-hero siege steam charts
+-hero siege demonspawn build
+-hero siege s10 tier list
+-hero siege act 9
+-hero siege plague doctor build
+-hero siege gabriel
+-hero siege how to get ether points
+-hero siege loot filters
+-how to get ether points hero siege
+-hero siege crafting
+-hero siege wormhole
+-hero siege paladin build
+-hero siege price check
+-damned commander hero siege
+-hero siege steamdb
+-hero siege marksman build
+
+---
+
+## 3. Similarweb / 关键词工具
+
+### 高搜索量词（首页≥2K）
+- hero siege
+-hero siege builds
+-hero siege season 10
+-hero siege season 10 tier list
+-hero siege steam charts
+-hero siege new season
+-hero siege ether for respawn boss
+-hero siege season 10 release date
+-hero siege wiki
+-hero siege quests
+-x hero siege
+-hero siege tier list
+-hero siege season 10 builds
+-hero siege discord
+-hero siege 2
+-hero siege items
+-hero siege steamdb
+-hero siege new season release date
+-hero siege build
+
+### 中长尾词（首页500-1999，或搜索意图明显更具体）
+- hero siege gurag
+-hero siege steam
+-book of belial hero siege
+-hero siege season 10 patch notes
+-hero siege bomb ships
+-hero siege s10
+-hero siege classes
+-hero siege unlock hell
+-hero siege the book of soulforge p...
+-sleepy cat hero siege
+-where to recruit mercenary in hero ...
+-hero siege patch notes
+-hero siege reddit
+-hero siege demonspawn
+-hero siege hunger issue
+-herosiege
+-hero siege mandatory or good que...
+-ring of cowraven hero siege
+-how to kill arthas in x hero siege
+-crow's feather hero siege
+-how many people are on belt team...
+-hero siege loot filter
+-hero siege mobile
+-it is important to do story quests in...
+-what day does hero siege come out
+-x hero siege 3.45
+-x hero siege mod by mub
+-hero siege garden colossus slain
+-jotunn hero siege season 9
+-hero siege guides
+-hero siege best class
+-hero siege helper
+-hero siege builder
+-hero siege ether loadout token price
+-hero siege microstransaction prices
+-hero siege seething souls quest
+-hero siege thunder goddess chosen
+-hero siege cheat engine
+-hero siege drop locations
+-hero siege shop
+-hero siege hack
+-blood pact hero siege
+-hero siege mod
+-x hero siege 3.33 2000 kills special...
+-x hero siege warcraft 3
+-hero siege trainer
+-hero siege family share
+-hero siege pest control quest
+-hero siege s10 release date
+-hero siege bosses
+-hero siege seething souls guide
+-hero siege seething souls guide no...
+-steam hero siege
+-hero siege steam verification failed
+-hero siege incarnation tree
+-hero siege village of lamia
+-hero siege price check
+-anime x hero siege ep do
+-hero siege blood pact
+-hero siege summoner build
+-hero siege top builds
+-hero siege stormweaver
+-maggot stec cooked hero siege
+-hero siege s10 tier list
+-the final sacrifice hero siege
+-can you swap between heroic and ...
+-hero siege how to get to helheim
+-hero siege next season
+-hero siege s10 patch notes
+-is nomad class good in hero siege ?
+-seething souls hero siege
+-the awesome ring quest hero siege
+-hero siege build planner
+-hero siege ping timeout
+-hero siege garden colossus
+-jogo hero siege
+-graxy hero siege
+-hero siege charts
+-soulforged ring hero siege
+-butcher blender hero siege
+-hero siege paladin build season 9
+
+### 问题型词（从问题查询页收集）
+- where to recruit mercenary in hero siege
+-how to kill arthas in x hero siege
+-how many people are on belt team siegecrafter heroic
+-what day does hero siege come out
+-how much is enouh magic find hero siege to find angelic items
+-how to kill arthas in x hero siege reddit
+-how to unlock hell difficulty hero siege
+-does additive cold damage affect skill hero siege
+-how to pay for all characters hero siege?
+-how to sped first 10 ether talent points in hero siege
+-how to get soulforged ring hero siege
+-why is hero siege using my wrong gpu
+-does classic mists of pandaria siege of orgrimmar have hard id heroic lockout?
+-how does the market work hero siege
+-what to do after chtullu hero siege
+-how to buy extra inventory space for hero siege, steam client is very unintuitive
+-how to change framerate in hero siege
+-how to upgrade star on item hero siege
+-how do you leave guild in hero siege
+-как раскопать луну hero siege
+-how long to beat normal mode hero siege
+-how does demonspawn mana stack in hero siege?
+-how to cook maggot stew hero siege
+-how to open trade hero siege
+-what is the siege hero pauldron space marine 2
+-как некоторые берут в hero siege по два двуручных оружий
+-do i need to vallahalla story to unlock nightmare mode now for hero siege?
+-how to unlock hell hero siege
+-how to beat odin boss hero siege as melee
+-how to beat odin fury as melle hero siege
+-how to get out of normal mode hero siege
+-how to unlock hell in hero siege
+-how to unlock hell in hero siege s10
+-where to farm baby log necklace hero siege
+-where to turn in destiny quest hero siege
+-как поменять скилл на панеле hero siege
+-how to start act 8 in hero siege
+-how to play hero siege
+-how to remove rune from item hero siege
+-which class to play in s10 hero siege
+-how to claim gold from aution house in hero siege
+-how to cook maggot stew in hero siege
+-how to play hero siege online for free
+-how to unlock forest of the slain hero siege
+-what gamemaker version is hero siege built with
+-does hero siege has trading
+-does magic find affect quest item drops in hero siege
+-what determines your ranking in hero siege
+-how to unlock nightmare hero siege
+-como fazer runeword hero siege
+-como jugar hero siege lan
+-do i loose the ether path if i die in hero siege
+-do i loose the items quipped on my mercenary when it die in hero's siege
+-do i lose the ether path if i die in hero siege
+-do white mages in hero siege commonly choose benediction skill?
+-does cleansing a corrupt item return it to normal hero siege
+-does flying help at all with the fight against melvin hero siege
+-does jewel have combo efgfects in hero's siege
+-does the carrion worm's inflammatory touch skill affect the player in hero siege
+-does the hero siege maps reset when you save and exit
+-does your item get permanently ruined with corruption hero siege
+-how difficult is the uber reaper in hero siege
+-how do eternity codexes work hero siege
+-how do i get the ability to have 5 relics in hero siege
+-how do i put a socket in a ring hero siege
+-how do you charge potions hero siege
+-how good is % increase in gold hero siege
+-how many times is shadow word bane cast protectors siege heroic
+-how to assign skills hero siege
+-how to get angelic keys single player hero siege
+-how to get incarnation and ether points in hero siege
+-how to get satanic dice hero siege
+-how to increase star level hero siege
+-how to increase the star level of an item in hero siege
+-how to unlock ingerno in hero siege
+-what are all the gloves that give auras in hero siege
+-what are all the helms that give auras in hero siege
+-what are all the shields that give auras in hero siege
+-what auras do the different mercs provide in hero siege
+-what does bifrost hero siege
+-what does flight get you in hero siege
+-what does monsters rest in peace after death mean hero siege
+-what does movement phasing hero siege
+-what does scroll of ra do hero siege
+-what does the 'back to basics' node do in hero siege
+-what does the sur rune go into hero siege
+-what is attack rating in hero siege
+-what is poison break in hero siege
+-what is the strategy with timers for thok heroic wow mop siege
+-what items can you put in sockets hero siege
+-what kind of damage does king karp do in hero siege
+-what passives do knight mercs have in hero siege
+-what to put in soulforged ring hero siege
+-where do you turn in the destiny quest hero siege
+-where is forest of the slain hero siege
+-where is rat den hero siege
+-where to get chaos key hero siege
+-why can't i craft in hero siege even if i have the enough materials
+-why cant i craft in hero's siege even if i have the enough materials
+-why hero siege popular
+
+
+### 低量但值得保留的词（首页<500）
+- 无
+
+
+## 4. Season 10 / 当前版本机会词
+
+### Season 10 核心
+- hero siege season 10
+- hero siege s10
+- hero siege season 10 builds
+- hero siege builds season 10
+- hero siege season 10 tier list
+- hero siege s10 tier list
+- hero siege season 10 patch notes
+- hero siege s10 patch notes
+- hero siege season 10 release date
+- hero siege new season
+- hero siege new season release date
+
+### Progression / 难度推进
+- hero siege unlock hell
+- hero siege how to unlock hell
+- how to unlock hell difficulty hero siege
+- how to unlock hell in hero siege s10
+- how to unlock nightmare hero siege
+- how to get out of normal mode hero siege
+- do i need to vallahalla story to unlock nightmare mode now for hero siege
+
+### Act / Quest
+- hero siege act 8
+- hero siege act 9
+- how to start act 8 in hero siege
+- hero siege quests
+- hero siege mandatory or good quests
+- it is important to do story quests in hero siege
+- hero siege seething souls quest
+- hero siege pest control quest
+- the awesome ring quest hero siege
+- the final sacrifice hero siege
+- where to turn in destiny quest hero siege
+
+### Season 10 系统
+- hero siege ether tree
+- ether tree hero siege
+- hero siege ether points
+- hero siege how to get ether points
+- how to get ether points hero siege
+- hero siege incarnation tree
+- how to get incarnation and ether points in hero siege
+- hero siege ether for respawn boss
+
+### 当前版本卡点 / 高价值问题
+- hero siege hunger issue
+- hunger issue hero siege
+- hero siege soulforged ring
+- soulforged ring hero siege
+- how to get soulforged ring hero siege
+- what to put in soulforged ring hero siege
+- crow's feather hero siege
+- where to recruit mercenary in hero siege
+- hero siege maggot stew
+- how to cook maggot stew hero siege
+- how to cook maggot stew in hero siege

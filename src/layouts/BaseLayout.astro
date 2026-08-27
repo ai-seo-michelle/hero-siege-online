@@ -1,0 +1,76 @@
+---
+import "../styles/global.css";
+import { mainNavigation } from "../data/navigation";
+import { siteConfig } from "../data/site";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+}
+
+const { title, description, canonicalPath = Astro.url.pathname } = Astro.props;
+const canonicalUrl = new URL(canonicalPath, siteConfig.url).toString();
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang={siteConfig.locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {
+      siteConfig.analyticsId && (
+        <>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.analyticsId}`}
+          ></script>
+          <script is:inline define:vars={{ analyticsId: siteConfig.analyticsId }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", analyticsId);
+          </script>
+        </>
+      )
+    }
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="msapplication-TileColor" content={siteConfig.themeColor} />
+    <meta name="theme-color" content={siteConfig.themeColor} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label={`${siteConfig.name} home`}>{siteConfig.name}</a>
+        <div class="nav-links">
+          {
+            mainNavigation.map((item) => (
+              <a
+                class={currentPath === item.href ? "nav-link nav-link-active" : "nav-link"}
+                href={item.href}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+      </nav>
+    </header>
+    <slot />
+    <footer class="site-footer">
+      <p>{siteConfig.description}</p>
+      <p>{siteConfig.disclaimer}</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { GuidePage } from "../data/guidePages";
+
+interface Props {
+  page: GuidePage;
+}
+
+const { page } = Astro.props;
+const isHome = page.route === "/";
+---
+
+<BaseLayout title={page.title} description={page.description} canonicalPath={page.route}>
+  <main class={isHome ? "home-shell" : "page-shell guide-page"}>
+    <section class={isHome ? "home-hero" : "page-hero guide-hero"} aria-labelledby="page-title">
+      <div class={isHome ? "hero-copy" : undefined}>
+        <p class="eyebrow">{page.eyebrow}</p>
+        <h1 id="page-title" class={isHome ? "home-title" : undefined}>{page.page}</h1>
+        <p class={isHome ? "home-lede" : "lede"}>{page.description}</p>
+        <dl class="seo-summary">
+          <div>
+            <dt>Target keyword</dt>
+            <dd>{page.keyword}</dd>
+          </div>
+          <div>
+            <dt>Page type</dt>
+            <dd>{page.pageType}</dd>
+          </div>
+          <div>
+            <dt>Version focus</dt>
+            <dd>Season 10 / current version</dd>
+          </div>
+        </dl>
+      </div>
+
+      {
+        page.heroImage ? (
+          <aside class="hero-media" aria-label={page.heroImage.alt}>
+            <img src={page.heroImage.src} alt={page.heroImage.alt} loading="eager" />
+            <p>{page.heroImage.caption}</p>
+          </aside>
+        ) : (
+          <aside class="source-card" aria-label="Source priority">
+            <p class="eyebrow">Source Priority</p>
+            <h2>Current-version checks first</h2>
+            <p>{page.sourcePriority}</p>
+          </aside>
+        )
+      }
+    </section>
+
+    <section class="guide-section" aria-labelledby="quick-answer">
+      <div class="section-heading">
+        <p class="eyebrow">Quick Answer</p>
+        <h2 id="quick-answer">Answer first</h2>
+      </div>
+      <div class="guide-panel">
+        {page.quickAnswer.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </section>
+
+    {
+      page.sections.map((section, index) => (
+        <section class="guide-section" aria-labelledby={`section-${index}`}>
+          <div class="section-heading">
+            {section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}
+            <h2 id={`section-${index}`}>{section.title}</h2>
+          </div>
+
+          {section.paragraphs && (
+            <div class="guide-panel">
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+          )}
+
+          {section.bullets && (
+            <ul class="check-list content-list">
+              {section.bullets.map((item) => <li>{item}</li>)}
+            </ul>
+          )}
+
+          {section.cards && (
+            <div class="start-grid">
+              {section.cards.map((card) =>
+                card.href ? (
+                  <a class="start-card compact-card" href={card.href}>
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                  </a>
+                ) : (
+                  <article class="start-card compact-card">
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                  </article>
+                )
+              )}
+            </div>
+          )}
+        </section>
+      ))
+    }
+
+    <section class="guide-section" aria-labelledby="related-guides">
+      <div class="section-heading">
+        <p class="eyebrow">Related Guides</p>
+        <h2 id="related-guides">Go next</h2>
+      </div>
+      <div class="link-grid">
+        {
+          page.relatedGuides.map((guide) => (
+            <a class="tip-card" href={guide.href}>
+              <h3>{guide.label}</h3>
+              <p>{guide.text}</p>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="guide-section" aria-labelledby="sources-references">
+      <div class="section-heading">
+        <p class="eyebrow">Sources & References</p>
+        <h2 id="sources-references">What this page relies on</h2>
+      </div>
+      <div class="source-list">
+        {
+          page.sources.map((source) => (
+            <article class="tip-card">
+              <h3>
+                {source.href ? (
+                  <a class="text-link inline-link" href={source.href} rel="noreferrer" target="_blank">
+                    {source.label}
+                  </a>
+                ) : (
+                  source.label
+                )}
+              </h3>
+              <p>{source.note}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    {
+      page.needsManualReview.length > 0 && (
+        <section class="guide-note" aria-labelledby="manual-review">
+          <div>
+            <p class="eyebrow">Needs Manual Review</p>
+            <h2 id="manual-review">Before publishing exact details</h2>
+          </div>
+          <ul class="check-list">
+            {page.needsManualReview.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+      )
+    }
+  </main>
+</BaseLayout>

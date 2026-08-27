@@ -1,0 +1,56 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface PageEntry {
+  data: {
+    title: string;
+    description: string;
+    route: string;
+    primaryKeyword: string;
+    relatedKeywords: string[];
+    pageType: string;
+    sourceLevel: string;
+    lastVerified?: string;
+  };
+}
+
+interface Props {
+  entry: PageEntry;
+}
+
+const { entry } = Astro.props;
+const page = entry.data;
+const canonicalPath = page.route === "/" ? "/" : `/${page.route.replace(/^\/|\/$/g, "")}/`;
+---
+
+<BaseLayout title={page.title} description={page.description} canonicalPath={canonicalPath}>
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">{page.pageType}</p>
+      <h1>{page.title}</h1>
+      <p class="lede">{page.description}</p>
+      <dl class="seo-summary">
+        <div>
+          <dt>Primary keyword</dt>
+          <dd>{page.primaryKeyword}</dd>
+        </div>
+        <div>
+          <dt>Source level</dt>
+          <dd>{page.sourceLevel}</dd>
+        </div>
+        {
+          page.lastVerified && (
+            <div>
+              <dt>Last verified</dt>
+              <dd>{page.lastVerified}</dd>
+            </div>
+          )
+        }
+      </dl>
+    </section>
+
+    <article class="content-shell">
+      <slot />
+    </article>
+  </main>
+</BaseLayout>

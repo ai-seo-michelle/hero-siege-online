@@ -1,0 +1,8 @@
+---
+import GuidePageView from "../components/GuidePageView.astro";
+import { guidePagesByRoute } from "../data/guidePages";
+
+const page = guidePagesByRoute["/"];
+---
+
+<GuidePageView page={page} />
