@@ -14,7 +14,7 @@ export const siteConfig = {
     "Current-version answers"
   ],
 
-  analyticsId: "" as string,
+  analyticsId: "G-HQTGGH8M0M" as string,
 
   disclaimer:
     "Independent fan-made Hero Siege guide. Not affiliated with Panic Art Studios."
