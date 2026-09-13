@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://herosiege.online/sitemap.xml
+Sitemap: https://herosiege.online/sitemap-index.xml

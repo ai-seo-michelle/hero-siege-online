@@ -157,6 +157,60 @@ const officialSources = {
     note:
       "Current community build guide used only to cross-check that Crow's Feather is still recommended as early utility gear."
   },
+  officialWikiMevius: {
+    label: "Official Hero Siege Wiki - Mevius",
+    href: "https://herosiege.wiki.gg/wiki/Mevius",
+    note:
+      "Official wiki boss page used for Mevius identity, act context, and baseline location wording."
+  },
+  officialWikiMemoryOfMevius: {
+    label: "Official Hero Siege Wiki - Memory of Mevius",
+    href: "https://herosiege.wiki.gg/wiki/Memory_of_Mevius",
+    note:
+      "Official wiki item page used to distinguish Memory of Mevius search intent from the base Mevius boss fight."
+  },
+  officialWikiBossDungeons: {
+    label: "Official Hero Siege Wiki - Boss Dungeons",
+    href: "https://herosiege.wiki.gg/wiki/Boss_Dungeons",
+    note:
+      "Official wiki boss-dungeon reference used for current boss-dungeon naming cross-checks."
+  },
+  heroSiegeDataBosses: {
+    label: "HeroSiegeData boss database",
+    href: "https://www.herosiegedata.com/en/bosses",
+    note:
+      "Current community data site used to cross-check boss entries, act placement, and visible difficulty data."
+  },
+  heroSiegeDataItemGuide: {
+    label: "HeroSiegeData item guide",
+    href: "https://www.herosiegedata.com/en/guide",
+    note:
+      "Current community data site used to cross-check Enchanted Sigil usage in endgame item and key references."
+  },
+  heroSiegeDataEther: {
+    label: "HeroSiegeData Ether Tree planner",
+    href: "https://www.herosiegedata.com/en/ether",
+    note:
+      "Current community data and planning page used to cross-check Ether Point sources and point-spending context."
+  },
+  hsHelperCraftPrices: {
+    label: "HS Helper craft prices",
+    href: "https://hero-siege-helper.vercel.app/craftprices",
+    note:
+      "Community crafting and price reference used for Enchanted Sigil price context, with its own WIP/default-price caveat."
+  },
+  hsHelperKeyPrices: {
+    label: "HS Helper key prices",
+    href: "https://hero-siege-helper.vercel.app/keyprices",
+    note:
+      "Community key and material price reference used to cross-check boss-access economy context."
+  },
+  tposeAmunRa: {
+    label: "T-Pose Gaming - Amun Ra guide",
+    href: "https://tposegaming.com/amun-ra-hero-siege/",
+    note:
+      "Current community boss-access guide used to cross-check Enchanted Sigil use for crafting Amun Ra keys."
+  },
   inGameVerification: {
     label: "Current in-game verification",
     note:
@@ -243,6 +297,16 @@ const homePage: GuidePage = {
           title: "Mandatory Quests",
           text: "Find which quest pages are planned as high-value Season 10 checks.",
           href: "/quests/mandatory/"
+        },
+        {
+          title: "Mevius",
+          text: "Use this boss guide when Act 7, Memory of Mevius, or post-Mevius progression is the question.",
+          href: "/bosses/mevius/"
+        },
+        {
+          title: "Enchanted Sigil",
+          text: "Check this item guide before spending or farming sigils for boss access and crafting.",
+          href: "/items/enchanted-sigil/"
         }
       ]
     },
@@ -281,6 +345,8 @@ const homePage: GuidePage = {
   relatedGuides: [
     { label: "Guide Hub", href: "/guide/", text: "Choose the right current-version page." },
     { label: "Season 10 Overview", href: "/season-10/", text: "Start with the season context." },
+    { label: "Mevius Guide", href: "/bosses/mevius/", text: "Check a high-intent boss and progression page." },
+    { label: "Enchanted Sigil", href: "/items/enchanted-sigil/", text: "Open the new item and crafting guide." },
     { label: "Act 9 Guide", href: "/act-9/", text: "Continue into progression help." },
     {
       label: "Unlock Nightmare",
@@ -311,7 +377,7 @@ const guideHub = pageFromMatrix("/guide/", {
   eyebrow: "Guide Hub",
   quickAnswer: [
     "Use this hub if you are new, returning, or unsure which Season 10 page answers your current problem.",
-    "The first batch focuses on pages with clear intent: Season 10 overview, Act 9, mandatory quests, Nightmare unlock, Soulforged Ring, Crow's Feather, mercenaries, and Ether Points.",
+    "The current guide set covers Season 10 overview, Act 9, mandatory quests, Nightmare unlock, Mevius, Enchanted Sigil, Soulforged Ring, Crow's Feather, mercenaries, and Ether Points.",
     "Troubleshooting pages are planned later; this hub does not link to routes that are not generated yet."
   ],
   sections: [
@@ -328,6 +394,16 @@ const guideHub = pageFromMatrix("/guide/", {
           title: "Act 9",
           text: "Use this when your next question is how to move through Act 9.",
           href: "/act-9/"
+        },
+        {
+          title: "Mevius",
+          text: "Use this when Act 7, Memory of Mevius, or what-to-do-after-Mevius is the search intent.",
+          href: "/bosses/mevius/"
+        },
+        {
+          title: "Enchanted Sigil",
+          text: "Use this when you need sigil acquisition, price, use, or crafting context.",
+          href: "/items/enchanted-sigil/"
         }
       ]
     },
@@ -396,6 +472,8 @@ const guideHub = pageFromMatrix("/guide/", {
   relatedGuides: [
     { label: "Home", href: "/", text: "Return to the site overview." },
     { label: "Season 10 Overview", href: "/season-10/", text: "Understand the current-version frame." },
+    { label: "Mevius Guide", href: "/bosses/mevius/", text: "Open the new boss progression guide." },
+    { label: "Enchanted Sigil", href: "/items/enchanted-sigil/", text: "Open the new item and crafting guide." },
     { label: "Act 9 Guide", href: "/act-9/", text: "Move into progression help." },
     { label: "Mandatory Quests", href: "/quests/mandatory/", text: "Review quest priorities." },
     { label: "Ether Points", href: "/systems/ether-points/", text: "Check a key Season 10 system page." }
@@ -409,106 +487,129 @@ const guideHub = pageFromMatrix("/guide/", {
 });
 
 const season10 = pageFromMatrix("/season-10/", {
-  title: "Hero Siege Season 10 Overview - Current-Version Guide",
+  title: "Hero Siege Season 10 Guide - Ebontharn, Progression, Bosses & Systems",
   description:
-    "A current-version Hero Siege Season 10 overview for returning players, covering Act 9, difficulty progression, Ether systems, quests, and outdated advice.",
+    "A Season 10 Hero Siege guide hub for Ebontharn, Act 9, Ether Points, Mevius, Enchanted Sigils, difficulty progression, and current-version next steps.",
   eyebrow: "Season 10",
   quickAnswer: [
-    "Season 10 is the Ebontharn season. Its headline change is a free Act 9, reached after defeating Odin at the end of Act 8, plus a large progression reset around the Normal -> Nightmare -> Hell -> Inferno flow.",
-    "The most important returning-player change is that Normal is now the only difficulty where you run the full Acts 1-9 campaign. After Normal is completed, Nightmare keeps the Normal waypoints, Nightmare now behaves like the old Hell 1 tier, and Hell moves much closer to late-game scaling.",
-    "Ether progression is much more visible in Season 10: the official notes add more Ether and Incarnation nodes, patch notes say Ether quest progress is visible in the pause-menu Quest Log on Hell+, and current developer-announcement mirrors report base Ether Points at level 100."
+    "Season 10 is the Ebontharn season. Its headline update is Act 9 after Act 8 Odin, plus a progression rewrite around Normal campaign completion, Nightmare, Hell, Inferno, Ether, Incarnation, and endgame boss access.",
+    "Use this page as a current-version map, not a patch-note dump: start with the campaign route, then branch into Mevius, Act 9, Nightmare, Ether Points, Enchanted Sigils, and high-value quest rewards based on where you are stuck.",
+    "For indexing value, this page now answers what changed, which guides are current, which old guides are risky, and where to go next inside the site. It deliberately avoids copying unconfirmed exact boss HP, drop rates, or hidden quest triggers."
   ],
   sections: [
     {
-      eyebrow: "Core Changes",
-      title: "What Season 10 actually changes",
+      eyebrow: "Current Version",
+      title: "What Season 10 changes",
       paragraphs: [
-        "The official Steam launch announcement describes Season 10 as Ebontharn, a major update with Act 9, new chase zones, three new Uber fights, a new seasonal Abyssal Chest, and a broad list of item, class, monster, and system changes.",
-        "The progression rewrite is the piece that most directly affects guides. Season 10 makes the Acts a Normal-difficulty campaign path, then shifts later difficulties toward farming, Ether, Incarnation, and endgame progression instead of repeating the full campaign route."
+        "The official Steam launch announcement frames Season 10 around Ebontharn, a free Act 9, new chase zones, three new Uber fights, a seasonal Abyssal Chest, and a wide patch-note set covering items, classes, monsters, systems, and quality-of-life changes.",
+        "The most important player-facing shift is progression. Normal is the full campaign route, including Act 8 and Act 9, while later difficulty play is more about retained waypoints, farming, Ether, Incarnation, and endgame systems. That makes pre-Season 10 route advice easy to misread."
+      ]
+    },
+    {
+      eyebrow: "Start Here",
+      title: "Season 10 route map",
+      bullets: [
+        "If you are still in early campaign, clear Acts in Normal and use Mevius as the Act 7 boss checkpoint.",
+        "After Act 7, continue toward Act 8 Odin and then Act 9 Ebontharn instead of following old repeated-difficulty campaign advice.",
+        "If you are looking for system progression, prioritize the Ether Points guide and treat exact point amounts as patch-sensitive.",
+        "If you are farming boss access or crafting materials, use the Enchanted Sigil page before assuming a fixed price or drop source.",
+        "If a guide gives exact HP, drop rates, key prices, or hidden unlock triggers without a current source, keep that claim under manual review."
+      ]
+    },
+    {
+      eyebrow: "Bosses And Items",
+      title: "New high-intent guides added in this pass",
+      cards: [
+        {
+          title: "Mevius",
+          text: "Find Mevius location context, fight approach, Memory of Mevius notes, and what to do after the boss.",
+          href: "/bosses/mevius/"
+        },
+        {
+          title: "Enchanted Sigil",
+          text: "Check what Enchanted Sigils are used for, where players look for them, and how price data should be read.",
+          href: "/items/enchanted-sigil/"
+        },
+        {
+          title: "Ether Points",
+          text: "Use the strengthened how-to page for Ether Tree points, access requirements, and missing-point troubleshooting.",
+          href: "/systems/ether-points/"
+        }
       ]
     },
     {
       eyebrow: "Progression",
-      title: "How the new route should be read",
-      bullets: [
-        "Play through Normal as the campaign route, including Act 8 and the new Act 9.",
-        "Act 9 opens after defeating Odin in Act 8, according to the official Ebontharn announcement.",
-        "Finishing Normal moves the character into the Nightmare stage while keeping Normal waypoints, according to the official Season 10 progression notes.",
-        "Nightmare is now positioned around old Hell 1 difficulty, and Hell is positioned much later than many older guides imply.",
-        "Inferno becomes the later endgame destination after the new Nightmare and Hell flow."
-      ]
-    },
-    {
-      eyebrow: "Act 9",
-      title: "What Act 9 is",
-      paragraphs: [
-        "Act 9 is Ebontharn, the new free campaign act added in Season 10. Official notes place it after Odin in Act 8 and describe it as the culmination point before the post-Normal progression loop.",
-        "Community walkthroughs currently report that Act 9 ends with Cthulhu in the Abyssal Realm and that clearing that Normal route is the practical Nightmare unlock path. Treat exact NPC names and objective sequence as community-reported until checked in-game."
-      ]
-    },
-    {
-      eyebrow: "Systems",
-      title: "Ether and Incarnation changes to notice",
-      bullets: [
-        "Season 10 adds more than 100 Ether Tree nodes and more than 600 Incarnation Tree nodes, according to the official patch-note sheet.",
-        "The official notes say the maximum loadout count increased to 8, which matters for players managing different progression setups.",
-        "Patch notes say completed and uncompleted Ether quests can be shown in the pause-menu Quest Log on Hell+.",
-        "Developer-announcement mirrors currently report base Ether Points at level 100, while community guides written around launch mention different starter amounts, so exact point totals still need manual review."
-      ]
-    },
-    {
-      eyebrow: "Returning Players",
-      title: "Old guides most likely to mislead you",
+      title: "Where old advice is most likely to fail",
       cards: [
         {
-          title: "Difficulty unlock guides",
-          text: "Any guide that explains Nightmare or Hell using pre-Season 10 campaign repetition can point you at the wrong milestone."
+          title: "Difficulty unlocks",
+          text: "Old Nightmare or Hell instructions can point at the wrong milestone if they ignore Season 10's Normal campaign route."
         },
         {
-          title: "Quest reward guides",
-          text: "Soulforged Ring changed from older experience wording to a level-bounded Season 10 experience bonus, so old reward-value advice can be stale."
+          title: "Boss HP and scaling",
+          text: "Boss data can vary by patch, difficulty, and character state. Only publish exact HP when a current data source or in-game check supports it."
         },
         {
-          title: "Ether guides",
-          text: "Older Ether Tree guides may still explain the idea, but Season 10 node count, quest visibility, and starter-point reports have changed."
+          title: "Item prices",
+          text: "Sigil prices and crafting values can move with economy data. Use them as market context, not permanent fixed facts."
         },
         {
-          title: "Mercenary notes",
-          text: "Older mercenary setup advice should be checked against the current gear, revive, aura, and survivability behavior before using it in a build plan."
+          title: "Quest rewards",
+          text: "Soulforged Ring and Crow's Feather are useful guide topics, but reward value and exact triggers still need current checks."
         }
       ]
     },
     {
       eyebrow: "Go Next",
-      title: "Which page answers your next question",
+      title: "Choose the guide that matches your problem",
       cards: [
         {
+          title: "How to Get Ether Points",
+          text: "Use this if you searched for Ether Tree points, level 100 points, Hell+ Ether quests, or missing Ether rewards.",
+          href: "/systems/ether-points/"
+        },
+        {
           title: "Act 9",
-          text: "Use this if you defeated Odin, need to enter Ebontharn, or your Act 9 quest marker is missing.",
+          text: "Use this if you defeated Odin and need the Ebontharn route or Nightmare unlock context.",
           href: "/act-9/"
         },
         {
-          title: "Unlock Nightmare",
-          text: "Use this if you finished Normal or defeated Cthulhu and Nightmare still does not appear.",
-          href: "/progression/unlock-nightmare/"
+          title: "Mandatory Quests",
+          text: "Use this to separate true progression gates from high-value optional rewards.",
+          href: "/quests/mandatory/"
+        }
+      ]
+    },
+    {
+      eyebrow: "FAQ",
+      title: "Season 10 common questions",
+      cards: [
+        {
+          title: "Is /season-10/ different from the home page?",
+          text: "Yes. The home page is a site entry point; this page is now a Season 10 topic hub with progression, boss, item, and system paths."
         },
         {
-          title: "Ether Points",
-          text: "Use this if you hit level 100, enter Hell+, or see Ether quest progress but do not understand the points.",
-          href: "/systems/ether-points/"
+          title: "Does Season 10 require Act 9?",
+          text: "For the current campaign route, Act 9 is part of the post-Odin progression flow. Exact final trigger details remain patch-sensitive."
+        },
+        {
+          title: "Are Mevius and Enchanted Sigil Season 10-only topics?",
+          text: "No. They are high-value current search topics connected to Season 10 progression and endgame planning, but they should not be described as Season 10-only content."
         }
       ]
     }
   ],
   relatedGuides: [
     { label: "Guide Hub", href: "/guide/", text: "Choose your next current-version page." },
+    { label: "Mevius Guide", href: "/bosses/mevius/", text: "Open the new boss progression guide." },
+    { label: "Enchanted Sigil", href: "/items/enchanted-sigil/", text: "Open the new item and crafting guide." },
+    { label: "How to Get Ether Points", href: "/systems/ether-points/", text: "Review the strengthened Ether guide." },
     { label: "Act 9 Guide", href: "/act-9/", text: "Move from season context into progression." },
     {
       label: "Unlock Nightmare",
       href: "/progression/unlock-nightmare/",
       text: "Check a difficulty unlock page."
-    },
-    { label: "Ether Points", href: "/systems/ether-points/", text: "Review a key system page." }
+    }
   ],
   sources: [
     officialSources.steamAnnouncements,
@@ -517,11 +618,13 @@ const season10 = pageFromMatrix("/season-10/", {
     officialSources.hstrackerSeason10,
     officialSources.hstrackerAnnouncements,
     officialSources.tposeUnlockHell,
-    officialSources.vortexSeason10Progression
+    officialSources.heroSiegeDataBosses,
+    officialSources.heroSiegeDataItemGuide
   ],
   needsManualReview: [
-    "Exact starter Ether Point amount and timing, because current community guides and developer-announcement mirrors conflict around launch.",
-    "Exact Act 9 NPC names, objective order, and final quest hand-in behavior after later hotfixes."
+    "Exact Act 9 NPC names, area-by-area objective order, and final quest hand-in behavior after later hotfixes.",
+    "Exact boss HP values by difficulty, including Mevius Normal HP, unless verified from current data or direct in-game checks.",
+    "Exact Enchanted Sigil market price, vendor availability, and drop/crafting rates because economy data can change."
   ]
 });
 
@@ -1093,94 +1196,108 @@ const mercenary = pageFromMatrix("/systems/mercenary/", {
 });
 
 const etherPoints = pageFromMatrix("/systems/ether-points/", {
-  title: "Hero Siege Ether Points - Current-Version System Guide",
+  title: "Hero Siege How to Get Ether Points - Ether Tree Points Guide",
   description:
-    "How Ether Points work in Hero Siege Season 10, how to get them, where to spend them, and what to check when points or quests do not appear.",
-  eyebrow: "System Troubleshooting Guide",
+    "How to get Ether Points in Hero Siege, unlock Ether Tree points, understand level and Hell+ requirements, and fix common missing-point confusion.",
+  eyebrow: "Ether Points Guide",
   quickAnswer: [
-    "Ether Points are progression points spent in the Ether Tree. The official system notes describe Ether quests as special quests on Hell difficulties and Inferno, while Season 10 patch notes add much more Ether Tree space and better quest visibility.",
-    "Current practical flow: reach post-campaign progression, hit level 100, enter Hell+ content where Ether quest progress can appear in the pause-menu Quest Log, complete the relevant Ether quests, then spend points in the Ether Tree.",
-    "If Ether Points do not appear, it is often a progression or UI-state issue rather than a bug: check level 100, difficulty, Quest Log visibility, completed/uncompleted Ether quest state, and whether your source is using the latest Season 10 patch numbers."
+    "To get Ether Points, reach the post-campaign progression layer, get to level 100, enter the Hell+ stage where Ether quests become relevant, complete the Ether quests shown in the Quest Log, and spend the points in the Ether Tree.",
+    "Season 10 strengthened the Ether system with more than 100 Ether Tree nodes and hotfix visibility for completed and uncompleted Ether quests in the pause-menu Quest Log on Hell+.",
+    "If you do not see Ether Points, first check level, difficulty, Quest Log state, whether you are looking at the Ether Tree rather than the Incarnation Tree, and whether the exact point amount in your guide predates later Season 10 hotfixes."
   ],
   sections: [
     {
-      eyebrow: "Basics",
-      title: "What Ether Points are",
-      paragraphs: [
-        "Ether Points are not ordinary skill points. They belong to the Ether Tree progression layer, which lets players invest in endgame mechanics and farming targets.",
-        "Season 10 did not remove that idea. Instead, it expanded the system: official patch notes add more than 100 Ether Tree nodes and hotfix notes improve the visibility of completed and uncompleted Ether quests on Hell+."
-      ]
-    },
-    {
-      eyebrow: "How To Get Them",
-      title: "Current acquisition path",
+      eyebrow: "How To Get Points",
+      title: "How to get Ether Points in Hero Siege",
       bullets: [
-        "Reach the later progression stage instead of expecting Ether Points during early Normal campaign play.",
-        "Hit level 100, which current community guides and developer-announcement mirrors identify as the start of Ether visibility or starter points.",
-        "Enter Hell+ content. Official older Ether-system notes describe Ether quests on Hell difficulties and Inferno, and Season 10 patch notes say Ether quest status is visible in the pause menu on Hell+.",
-        "Complete the Ether quests shown for your current difficulty or progression state.",
-        "Spend points in the Ether Tree and adjust the tree when your farming target changes."
+        "Finish enough progression to move beyond early Normal campaign play; Ether Points are not an early leveling resource.",
+        "Reach level 100, which current community guides and developer-announcement mirrors identify as the start of Ether visibility or starter points.",
+        "Move into Hell+ content where Ether quests are expected to appear. Season 10 patch notes specifically mention Ether quest status in the pause-menu Quest Log on Hell+.",
+        "Complete the visible Ether quests for your current difficulty or progression state.",
+        "Spend the earned points in the Ether Tree, then re-check your tree before assuming points are missing."
       ]
     },
     {
-      eyebrow: "Ether Tree",
-      title: "Ether Tree, Incarnation Tree, and points",
+      eyebrow: "Ether Tree Points",
+      title: "Ether Points vs Ether Tree points",
       paragraphs: [
-        "Think of Ether Points as the currency for the Ether Tree. The tree changes which endgame mechanics you can force, improve, or build around, depending on current node wording.",
-        "The Incarnation Tree is adjacent but separate. Season 10 added more than 600 Incarnation nodes, while the Ether Tree received more than 100 new nodes. Do not mix the two point systems when following guides."
+        "Players often search for Ether Tree points and Ether Points as the same thing. In practical terms, Ether Points are the points you spend in the Ether Tree; the tree is the interface and progression layer where those points matter.",
+        "The Incarnation Tree is related endgame progression, but it is not the same tree. Season 10 added more than 600 Incarnation nodes and more than 100 Ether Tree nodes, so mixing the two systems is an easy way to misread a guide."
+      ]
+    },
+    {
+      eyebrow: "Access Requirements",
+      title: "When the Ether system starts to matter",
+      cards: [
+        {
+          title: "Before level 100",
+          text: "Do not plan around Ether Points yet. Focus on campaign, gear, and difficulty progression."
+        },
+        {
+          title: "At level 100",
+          text: "Start checking Ether UI, Ether Tree access, and current patch notes for starter-point behavior."
+        },
+        {
+          title: "Hell+ progression",
+          text: "Use the Quest Log to track completed and uncompleted Ether quests; this is where Season 10 notes explicitly mention visibility."
+        }
       ]
     },
     {
       eyebrow: "Troubleshooting",
-      title: "When Ether Points do not appear",
+      title: "Why you may not receive or find Ether Points",
       bullets: [
-        "Confirm your character is level 100 or otherwise in the current Ether unlock range shown by the game.",
-        "Confirm you are in Hell+ or another difficulty where Ether quests are expected to appear.",
-        "Open the pause-menu Quest Log and look for completed or uncompleted Ether quests; Season 10 hotfix notes specifically mention this visibility.",
-        "Check whether you already spent points in the Ether Tree, reset the tree, or are looking at Incarnation progression instead.",
-        "Compare exact point totals carefully. Community sources around launch mention different starter amounts, while developer-announcement mirrors later report a base level-100 amount."
+        "You are below level 100 or not yet in the expected progression layer.",
+        "You are in the wrong difficulty for the Ether quest you are trying to complete.",
+        "You are checking Incarnation progression instead of the Ether Tree.",
+        "The point was already spent, or the tree/UI needs to be reopened after a quest update.",
+        "The guide you followed used launch-week point totals or older Season 9 assumptions.",
+        "The exact Ether quest amount or repeatability changed, which should stay under manual review until verified."
       ]
     },
     {
-      eyebrow: "Not Always A Bug",
-      title: "Common false alarms",
-      bullets: [
-        "You are below level 100 and expecting the Ether Tree too early.",
-        "You are still in Normal or Nightmare campaign progression and not in the expected Hell+ quest state.",
-        "You are checking the wrong tree, especially confusing Incarnation nodes for Ether nodes.",
-        "You are reading a Season 9 or launch-day guide with a starter-point number that changed in a hotfix.",
-        "You completed a quest but have not refreshed the UI, reopened the Quest Log, or checked whether the point was already spent."
+      eyebrow: "Current Data",
+      title: "What can be stated safely",
+      paragraphs: [
+        "Official Season 10 notes safely support the system-level claims: Ether Tree expansion, Hell+ Quest Log visibility, and the importance of current patch context. Current community data tools also model Ether Point sources and spending, but exact values should be treated as live data until checked in-game.",
+        "That is why this page gives a clear acquisition path while keeping exact point amounts, repeatability, and bug claims in Needs Manual Review."
       ]
     },
     {
-      eyebrow: "Decision Guide",
-      title: "What to check first",
+      eyebrow: "FAQ",
+      title: "Ether Points FAQ",
       cards: [
         {
-          title: "No Ether UI",
-          text: "Check level 100 and post-campaign progression before assuming a missing system."
+          title: "How do I get Ether Tree points?",
+          text: "Reach the late progression layer, check level 100 and Hell+ Ether quests, complete the quests, then spend points in the Ether Tree."
         },
         {
-          title: "No quest progress",
-          text: "Check Hell+ Quest Log visibility and whether the Ether quest is completed or uncompleted."
+          title: "Are Ether Points skill points?",
+          text: "No. They are tied to the Ether Tree progression system, not your regular character skill tree."
         },
         {
-          title: "Wrong point total",
-          text: "Treat exact amounts as patch-sensitive and compare against the latest current-version notes."
+          title: "Is missing Ether a bug?",
+          text: "Not by default. Most cases should first be checked against level, difficulty, Quest Log state, spent points, and current patch notes."
+        },
+        {
+          title: "Where should I go next?",
+          text: "If your issue is broader Season 10 progression, use the Season 10 guide; if it is boss or item access, check Mevius or Enchanted Sigil."
         }
       ]
     }
   ],
   relatedGuides: [
     { label: "Guide Hub", href: "/guide/", text: "Return to the guide index." },
-    { label: "Season 10 Overview", href: "/season-10/", text: "Review current-version context." },
-    { label: "Mercenary Guide", href: "/systems/mercenary/", text: "Check another system page." },
-    { label: "Act 9 Guide", href: "/act-9/", text: "Check progression context." }
+    { label: "Season 10 Overview", href: "/season-10/", text: "Review current-version progression context." },
+    { label: "Enchanted Sigil", href: "/items/enchanted-sigil/", text: "Check item and crafting economy context." },
+    { label: "Mevius Guide", href: "/bosses/mevius/", text: "Check a boss progression page." },
+    { label: "Act 9 Guide", href: "/act-9/", text: "Check campaign progression context." }
   ],
   sources: [
     officialSources.season10PatchSheet,
     officialSources.hstrackerSeason10,
     officialSources.hstrackerAnnouncements,
+    officialSources.heroSiegeDataEther,
     officialSources.tposeEtherTree,
     officialSources.vortexSeason10Progression,
     officialSources.inGameVerification
@@ -1188,10 +1305,232 @@ const etherPoints = pageFromMatrix("/systems/ether-points/", {
   needsManualReview: [
     "Exact starter Ether Point amount and exact timing, because launch-era community guides and later developer-announcement mirrors disagree.",
     "Exact repeatability and point amounts for each Ether quest on Hell difficulties and Inferno.",
-    "Any claim that missing Ether Points is a confirmed bug rather than a level, difficulty, Quest Log, or spent-point state."
+    "Any claim that missing Ether Points is a confirmed bug rather than a level, difficulty, Quest Log, spent-point, or patch-state issue."
   ]
 });
 
+const mevius = pageFromMatrix("/bosses/mevius/", {
+  title: "Hero Siege Mevius Guide - Location, How to Beat Mevius & What to Do After",
+  description:
+    "A practical Hero Siege Mevius guide covering location, how to reach and fight Mevius, Memory of Mevius, HP cautions, and what to do after the boss.",
+  eyebrow: "Boss Guide",
+  quickAnswer: [
+    "Mevius is the major Act 7 boss checkpoint. Official wiki and current data sources agree on Act 7 context, but location labels differ across sources, so follow the Act 7 final boss route and your current quest marker rather than one old area name.",
+    "For the fight, prioritize movement, add control, and steady damage uptime. Reliable public sources do not give enough current detail to publish exact HP, phase timings, or hidden mechanics by difficulty, so this page treats those numbers as manual-review data.",
+    "After Mevius, continue the Season 10 campaign path toward Act 8, Odin, Act 9 Ebontharn, and then the post-Normal progression loop. Memory of Mevius is a related item/search intent, not the same thing as the base boss location question."
+  ],
+  sections: [
+    {
+      eyebrow: "Location",
+      title: "Where to find Mevius",
+      bullets: [
+        "Use Act 7 as the reliable starting point for Mevius searches.",
+        "Official wiki wording points players toward The Verge of Insanity, while current data tools surface Act 7 boss data with nearby zone naming such as Subconscious Mind / The Void.",
+        "If those names do not match your current client, follow the active Act 7 quest marker and final boss path rather than forcing an older dungeon label.",
+        "Do not confuse Mevius with Memory of Mevius, which is a related item/data entry and a separate search intent."
+      ]
+    },
+    {
+      eyebrow: "How To Reach",
+      title: "How to reach and start the fight",
+      bullets: [
+        "Progress through Act 7 until your objective points at the final boss route.",
+        "Use the current waypoint or quest tracker for the last Act 7 area because public sources disagree on exact displayed location names.",
+        "Enter the boss instance, check difficulty, and avoid relying on a pre-Season 10 route if the UI has different area names.",
+        "If you are revisiting the boss for farming, confirm your difficulty and waypoint state before comparing HP or rewards."
+      ]
+    },
+    {
+      eyebrow: "Strategy",
+      title: "How to beat Mevius",
+      paragraphs: [
+        "The safe strategy advice is practical rather than number-heavy: keep moving, avoid standing still during boss patterns, clear or kite pressure before it traps you, and preserve defensive cooldowns for mistakes instead of spending everything on damage uptime.",
+        "Because exact Mevius mechanics and HP are not consistently documented in current public sources, this guide does not claim specific phase names, timers, or damage thresholds. Treat any exact mechanic list from older guides as useful only after it matches your current fight."
+      ]
+    },
+    {
+      eyebrow: "HP And Difficulty",
+      title: "What can be said about Mevius HP",
+      bullets: [
+        "Mevius HP scales by difficulty and current patch data, so a single HP number without source context is risky.",
+        "The reviewed sources did not provide a reliable current Normal HP value suitable for publication.",
+        "Use current data tools or direct in-game checks for exact HP before adding values to a build or boss-farm plan.",
+        "If a SERP result promises 'Mevius HP Normal', verify the date and game version before trusting it."
+      ]
+    },
+    {
+      eyebrow: "After Mevius",
+      title: "What to do after defeating Mevius",
+      cards: [
+        {
+          title: "Continue the campaign",
+          text: "In Season 10, move toward Act 8 and Odin, then Act 9 Ebontharn rather than stopping at Act 7.",
+          href: "/season-10/"
+        },
+        {
+          title: "Check boss-access items",
+          text: "If you are shifting from campaign bosses into special boss access, review Enchanted Sigil before spending materials.",
+          href: "/items/enchanted-sigil/"
+        },
+        {
+          title: "Plan post-Normal progression",
+          text: "If your next issue is difficulty access, review the Nightmare unlock guide.",
+          href: "/progression/unlock-nightmare/"
+        }
+      ]
+    },
+    {
+      eyebrow: "FAQ",
+      title: "Mevius FAQ",
+      cards: [
+        {
+          title: "Is Memory of Mevius the boss?",
+          text: "No. It is a related item/search topic. The boss guide and the Memory item should not be merged into one exact-mechanic claim."
+        },
+        {
+          title: "Where is Mevius located?",
+          text: "Act 7 is the reliable context; exact area labels differ across sources, so follow the current Act 7 quest marker."
+        },
+        {
+          title: "What should I do after Mevius?",
+          text: "Continue toward Act 8 Odin, Act 9, and current Season 10 progression pages."
+        },
+        {
+          title: "Can I publish Mevius Normal HP?",
+          text: "Not from the reviewed sources alone. Exact HP stays under manual review until current data or in-game verification supports it."
+        }
+      ]
+    }
+  ],
+  relatedGuides: [
+    { label: "Season 10 Overview", href: "/season-10/", text: "Continue into the current-version route map." },
+    { label: "Enchanted Sigil", href: "/items/enchanted-sigil/", text: "Check boss-access item and crafting context." },
+    { label: "Act 9 Guide", href: "/act-9/", text: "Move ahead in campaign progression." },
+    { label: "Unlock Nightmare", href: "/progression/unlock-nightmare/", text: "Check post-Normal difficulty access." }
+  ],
+  sources: [
+    officialSources.officialWikiMevius,
+    officialSources.officialWikiMemoryOfMevius,
+    officialSources.officialWikiBossDungeons,
+    officialSources.heroSiegeDataBosses,
+    officialSources.steamAnnouncements,
+    officialSources.season10PatchSheet,
+    officialSources.inGameVerification
+  ],
+  needsManualReview: [
+    "Exact Mevius Normal HP and HP by difficulty in the current patch.",
+    "Exact displayed area name if the current client differs from official wiki and data-site naming.",
+    "Exact fight phases, ability names, drop table, and Memory of Mevius acquisition behavior."
+  ]
+});
+const enchantedSigil = pageFromMatrix("/items/enchanted-sigil/", {
+  title: "Hero Siege Enchanted Sigil Guide - Where to Get, Price, Uses & Crafting",
+  description:
+    "A Hero Siege Enchanted Sigil guide covering what it is, where players get it, price caveats, crafting uses, Amun Ra access, and common mistakes.",
+  eyebrow: "Item Guide",
+  quickAnswer: [
+    "Enchanted Sigil is an endgame-access and crafting material players search for when they are trying to craft keys or understand boss-access costs. Current community guides connect it most clearly to crafting Amun Ra keys.",
+    "Do not treat one price as permanent. Current helper tools show price data for sigils and related keys, but those tools also warn that displayed defaults are not fixed Auction House prices and can move with the market or patch state.",
+    "If you need one, check town/vendor availability, current market listings, crafting price tables, and the boss-access guide you are following. Keep exact vendor, drop, and repeatability claims under manual review unless your current game confirms them."
+  ],
+  sections: [
+    {
+      eyebrow: "Basics",
+      title: "What Enchanted Sigil is",
+      paragraphs: [
+        "Enchanted Sigil is best treated as a material/economy item, not ordinary leveling gear. Players search it because they need to know whether to buy it, farm it, or save it for crafting.",
+        "The strongest current use case found in public guides is Amun Ra access: community boss-access guides describe crafting an Amun Ra key using an Enchanted Sigil and a Key of Ra."
+      ]
+    },
+    {
+      eyebrow: "Where To Get",
+      title: "Where and how players get Enchanted Sigils",
+      bullets: [
+        "Check current vendor or town listings first if your guide says the sigil is sold by a town vendor.",
+        "Check Auction House or market listings if you are playing in an economy-enabled mode.",
+        "Check current crafting and key price tools before deciding whether to buy a sigil or craft/farm the downstream key instead.",
+        "Treat exact monster drops or repeatable farming routes as unconfirmed unless the current client or a reliable current data source shows them."
+      ]
+    },
+    {
+      eyebrow: "Price",
+      title: "How to read price information",
+      paragraphs: [
+        "Price data for Enchanted Sigils is version- and economy-sensitive. HS Helper provides craft-price context and labels its data as work in progress, with default values that are not automatically the live Auction House price.",
+        "For a player guide, the useful answer is not one frozen number. The useful answer is to compare vendor availability, current market listings, key crafting cost, and the value of the boss attempt you are trying to access."
+      ]
+    },
+    {
+      eyebrow: "Crafting Uses",
+      title: "What Enchanted Sigil is used for",
+      bullets: [
+        "Current community Amun Ra guides describe Enchanted Sigil as part of the Amun Ra key craft.",
+        "HeroSiegeData and HS Helper item/key references provide cross-checks for item and key economy context.",
+        "If a recipe, price, or vendor source changes after a patch, prefer the current in-game crafting UI over old guide text.",
+        "Do not spend every sigil immediately if you are unsure whether you need it for boss access or a later craft."
+      ]
+    },
+    {
+      eyebrow: "Common Mistakes",
+      title: "Common Enchanted Sigil mistakes",
+      cards: [
+        {
+          title: "Assuming fixed price",
+          text: "Treat price tables as context. Check the current market or vendor state before buying."
+        },
+        {
+          title: "Confusing use and source",
+          text: "A guide may verify a crafting use without verifying every source or drop route."
+        },
+        {
+          title: "Buying before planning",
+          text: "If your goal is Amun Ra access, compare the full key cost, not only the sigil cost."
+        }
+      ]
+    },
+    {
+      eyebrow: "FAQ",
+      title: "Enchanted Sigil FAQ",
+      cards: [
+        {
+          title: "Where does Enchanted Sigil drop?",
+          text: "The reviewed sources do not support a precise current drop route. Check current data or in-game loot/crafting UI before publishing a drop claim."
+        },
+        {
+          title: "What is it used for?",
+          text: "The clearest current use found is boss-access crafting, especially Amun Ra key context in community guides."
+        },
+        {
+          title: "What is the price?",
+          text: "Use current market, vendor, and helper data. Do not treat an old guide number as a permanent price."
+        },
+        {
+          title: "Should I farm or buy it?",
+          text: "Buy when market price is lower than your time cost; farm or wait when prices spike or the source is already in your planned route."
+        }
+      ]
+    }
+  ],
+  relatedGuides: [
+    { label: "Season 10 Overview", href: "/season-10/", text: "Return to the current-version hub." },
+    { label: "Mevius Guide", href: "/bosses/mevius/", text: "Check a boss progression page." },
+    { label: "How to Get Ether Points", href: "/systems/ether-points/", text: "Move into endgame progression systems." },
+    { label: "Mandatory Quests", href: "/quests/mandatory/", text: "Separate mandatory progress from optional reward chasing." }
+  ],
+  sources: [
+    officialSources.heroSiegeDataItemGuide,
+    officialSources.hsHelperCraftPrices,
+    officialSources.hsHelperKeyPrices,
+    officialSources.tposeAmunRa,
+    officialSources.hstrackerSeason10,
+    officialSources.inGameVerification
+  ],
+  needsManualReview: [
+    "Exact current vendor NPC, vendor price, and whether vendor availability differs by mode, patch, or progression state.",
+    "Exact drop sources, drop rates, and repeatability for Enchanted Sigils.",
+    "Exact live economy price because Auction House and helper defaults can diverge."
+  ]
+});
 export const guidePages = [
   homePage,
   guideHub,
@@ -1202,7 +1541,9 @@ export const guidePages = [
   soulforgedRing,
   crowsFeather,
   mercenary,
-  etherPoints
+  etherPoints,
+  mevius,
+  enchantedSigil
 ] as const satisfies GuidePage[];
 
 export const guidePagesByRoute = Object.fromEntries(

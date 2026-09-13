@@ -92,13 +92,37 @@ export const pageMatrix: PageMatrixEntry[] = [
     launchDecision: "Launch",
   },
   {
-    page: "Hero Siege Ether Points",
+    page: "Hero Siege How to Get Ether Points",
     route: "/systems/ether-points/",
-    keyword: "hero siege ether points",
+    keyword: "hero siege how to get ether points",
     userQuestion: "How do I get Ether Points, and why might they not appear?",
     pageType: "System / Troubleshooting Guide",
     sourcePriority:
       "Official patch notes → in-game mechanics → current community reports",
+    priority: "P0",
+    launchDecision: "Launch",
+  },
+  {
+    page: "Hero Siege Mevius Guide",
+    route: "/bosses/mevius/",
+    keyword: "hero siege mevius",
+    userQuestion:
+      "Where is Mevius, how do I beat Mevius, and what should I do after the fight?",
+    pageType: "Boss / Progression Guide",
+    sourcePriority:
+      "Official wiki → current boss data → verified community progression notes",
+    priority: "P0",
+    launchDecision: "Launch",
+  },
+  {
+    page: "Hero Siege Enchanted Sigil Guide",
+    route: "/items/enchanted-sigil/",
+    keyword: "hero siege enchanted sigil",
+    userQuestion:
+      "Where do I get Enchanted Sigils, what do they cost, and what are they used for?",
+    pageType: "Item / Crafting Guide",
+    sourcePriority:
+      "Current item data → crafting price data → verified community boss-access notes",
     priority: "P0",
     launchDecision: "Launch",
   },
