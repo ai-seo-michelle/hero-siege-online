@@ -320,6 +320,11 @@ const homePage: GuidePage = {
           href: "/progression/unlock-nightmare/"
         },
         {
+          title: "Unlock Hell",
+          text: "For players who cleared Nightmare or need to know why Hell is still locked.",
+          href: "/progression/unlock-hell/"
+        },
+        {
           title: "Mercenary",
           text: "For players who want to understand the mercenary system before relying on old notes.",
           href: "/systems/mercenary/"
@@ -354,6 +359,11 @@ const homePage: GuidePage = {
       text: "Check the current-version unlock page."
     },
     {
+      label: "Unlock Hell",
+      href: "/progression/unlock-hell/",
+      text: "Follow the Nightmare to Hell difficulty path."
+    },
+    {
       label: "Mandatory Quests",
       href: "/quests/mandatory/",
       text: "Review high-value quest pages."
@@ -377,7 +387,7 @@ const guideHub = pageFromMatrix("/guide/", {
   eyebrow: "Guide Hub",
   quickAnswer: [
     "Use this hub if you are new, returning, or unsure which Season 10 page answers your current problem.",
-    "The current guide set covers Season 10 overview, Act 9, mandatory quests, Nightmare unlock, Mevius, Enchanted Sigil, Soulforged Ring, Crow's Feather, mercenaries, and Ether Points.",
+    "The current guide set covers Season 10 overview, Act 9, mandatory quests, Nightmare and Hell unlocks, Mevius, Enchanted Sigil, Soulforged Ring, Crow's Feather, mercenaries, and Ether Points.",
     "Troubleshooting pages are planned later; this hub does not link to routes that are not generated yet."
   ],
   sections: [
@@ -415,6 +425,11 @@ const guideHub = pageFromMatrix("/guide/", {
           title: "Unlock Nightmare",
           text: "For players trying to move beyond Normal difficulty in the current version.",
           href: "/progression/unlock-nightmare/"
+        },
+        {
+          title: "Unlock Hell",
+          text: "For players moving from Nightmare into Hell without following old difficulty advice.",
+          href: "/progression/unlock-hell/"
         },
         {
           title: "Act 9 Guide",
@@ -475,6 +490,7 @@ const guideHub = pageFromMatrix("/guide/", {
     { label: "Mevius Guide", href: "/bosses/mevius/", text: "Open the new boss progression guide." },
     { label: "Enchanted Sigil", href: "/items/enchanted-sigil/", text: "Open the new item and crafting guide." },
     { label: "Act 9 Guide", href: "/act-9/", text: "Move into progression help." },
+    { label: "Unlock Hell", href: "/progression/unlock-hell/", text: "Continue the difficulty unlock chain." },
     { label: "Mandatory Quests", href: "/quests/mandatory/", text: "Review quest priorities." },
     { label: "Ether Points", href: "/systems/ether-points/", text: "Check a key Season 10 system page." }
   ],
@@ -511,6 +527,7 @@ const season10 = pageFromMatrix("/season-10/", {
       bullets: [
         "If you are still in early campaign, clear Acts in Normal and use Mevius as the Act 7 boss checkpoint.",
         "After Act 7, continue toward Act 8 Odin and then Act 9 Ebontharn instead of following old repeated-difficulty campaign advice.",
+        "Use the Nightmare and Hell unlock pages as the difficulty chain after Act 9 instead of following old repeated-campaign advice.",
         "If you are looking for system progression, prioritize the Ether Points guide and treat exact point amounts as patch-sensitive.",
         "If you are farming boss access or crafting materials, use the Enchanted Sigil page before assuming a fixed price or drop source.",
         "If a guide gives exact HP, drop rates, key prices, or hidden unlock triggers without a current source, keep that claim under manual review."
@@ -574,9 +591,35 @@ const season10 = pageFromMatrix("/season-10/", {
           href: "/act-9/"
         },
         {
+          title: "Unlock Hell",
+          text: "Use this after Nightmare when you need the current Season 10 Hell unlock path.",
+          href: "/progression/unlock-hell/"
+        },
+        {
           title: "Mandatory Quests",
           text: "Use this to separate true progression gates from high-value optional rewards.",
           href: "/quests/mandatory/"
+        }
+      ]
+    },
+    {
+      eyebrow: "Indexing Paths",
+      title: "Useful pages that should not be orphaned",
+      cards: [
+        {
+          title: "Soulforged Ring",
+          text: "Check this later quest reward when leveling value or Hell quest context matters.",
+          href: "/quests/soulforged-ring/"
+        },
+        {
+          title: "Crow's Feather",
+          text: "Use this early utility reward page when starter movement speed or Act 1 route notes are the issue.",
+          href: "/quests/crows-feather/"
+        },
+        {
+          title: "Mercenary",
+          text: "Open this system page before relying on old mercenary aura or recruitment notes.",
+          href: "/systems/mercenary/"
         }
       ]
     },
@@ -608,8 +651,16 @@ const season10 = pageFromMatrix("/season-10/", {
     {
       label: "Unlock Nightmare",
       href: "/progression/unlock-nightmare/",
-      text: "Check a difficulty unlock page."
-    }
+      text: "Check the Normal to Nightmare unlock page."
+    },
+    {
+      label: "Unlock Hell",
+      href: "/progression/unlock-hell/",
+      text: "Continue from Nightmare into the Hell unlock page."
+    },
+    { label: "Mercenary Guide", href: "/systems/mercenary/", text: "Check a current-version system guide." },
+    { label: "Soulforged Ring", href: "/quests/soulforged-ring/", text: "Review a later quest reward page." },
+    { label: "Crow's Feather", href: "/quests/crows-feather/", text: "Review an early utility reward page." }
   ],
   sources: [
     officialSources.steamAnnouncements,
@@ -696,7 +747,12 @@ const act9 = pageFromMatrix("/act-9/", {
         {
           title: "Cthulhu is cleared but Nightmare is missing",
           text: "Use the Nightmare page to check the current difficulty unlock flow.",
-          href: "/systems/ether-points/"
+          href: "/progression/unlock-nightmare/"
+        },
+        {
+          title: "Nightmare is open",
+          text: "Use the Hell unlock page before assuming older difficulty advice is still accurate.",
+          href: "/progression/unlock-hell/"
         }
       ]
     }
@@ -705,6 +761,7 @@ const act9 = pageFromMatrix("/act-9/", {
     { label: "Guide Hub", href: "/guide/", text: "Return to the guide index." },
     { label: "Season 10 Overview", href: "/season-10/", text: "Check current-version context." },
     { label: "Unlock Nightmare", href: "/progression/unlock-nightmare/", text: "Check difficulty access." },
+    { label: "Unlock Hell", href: "/progression/unlock-hell/", text: "Continue the difficulty unlock path after Nightmare." },
     { label: "Ether Points", href: "/systems/ether-points/", text: "Review progression resources." }
   ],
   sources: [
@@ -779,8 +836,9 @@ const mandatoryQuests = pageFromMatrix("/quests/mandatory/", {
       bullets: [
         "First, clear visible campaign objectives through Act 8 Odin and Act 9.",
         "Second, check whether the blocked feature is tied to difficulty access, especially Nightmare or Hell.",
-        "Third, do high-value reward quests only when the reward solves a current problem, such as leveling speed or movement.",
-        "Fourth, use daily or farming quests when you are optimizing, not when you are trying to unlock the next campaign stage.",
+        "Third, use the Nightmare and Hell unlock pages for the difficulty chain before assuming a side quest is blocking you.",
+        "Fourth, do high-value reward quests only when the reward solves a current problem, such as leveling speed or movement.",
+        "Fifth, use daily or farming quests when you are optimizing, not when you are trying to unlock the next campaign stage.",
         "Finally, if two current sources disagree on a quest trigger, keep playing from the in-game tracker and mark the exact trigger for manual review."
       ]
     },
@@ -815,6 +873,8 @@ const mandatoryQuests = pageFromMatrix("/quests/mandatory/", {
   relatedGuides: [
     { label: "Guide Hub", href: "/guide/", text: "Return to the guide index." },
     { label: "Season 10 Overview", href: "/season-10/", text: "Check current-version context." },
+    { label: "Unlock Nightmare", href: "/progression/unlock-nightmare/", text: "Check the first difficulty gate." },
+    { label: "Unlock Hell", href: "/progression/unlock-hell/", text: "Check the next difficulty gate." },
     { label: "Soulforged Ring", href: "/quests/soulforged-ring/", text: "Open the ring quest page." },
     { label: "Crow's Feather", href: "/quests/crows-feather/", text: "Open the feather quest page." }
   ],
@@ -853,7 +913,8 @@ const unlockNightmare = pageFromMatrix("/progression/unlock-nightmare/", {
         "Clear the campaign through Act 8 and defeat Odin.",
         "Enter Act 9 Ebontharn after Odin, using the current quest tracker and minimap indicators.",
         "Clear the Act 9 route. Community progression guides currently report Cthulhu in the Abyssal Realm as the final Normal milestone.",
-        "Return to difficulty selection or the relevant progression UI and check whether Nightmare is now available."
+        "Return to difficulty selection or the relevant progression UI and check whether Nightmare is now available.",
+        "Once Nightmare is open, use the Unlock Hell guide for the next difficulty step instead of assuming the same trigger wording applies again."
       ]
     },
     {
@@ -902,6 +963,11 @@ const unlockNightmare = pageFromMatrix("/progression/unlock-nightmare/", {
           title: "Act 9 is complete but Nightmare is missing",
           text: "Check final boss credit, quest turn-in state, party credit, and patch state before reporting a bug.",
           href: "/quests/mandatory/"
+        },
+        {
+          title: "Nightmare is unlocked",
+          text: "Move to the Hell unlock page when your next question is what comes after Nightmare.",
+          href: "/progression/unlock-hell/"
         }
       ]
     }
@@ -910,6 +976,7 @@ const unlockNightmare = pageFromMatrix("/progression/unlock-nightmare/", {
     { label: "Guide Hub", href: "/guide/", text: "Return to the guide index." },
     { label: "Season 10 Overview", href: "/season-10/", text: "Check current-version context." },
     { label: "Act 9 Guide", href: "/act-9/", text: "Check story progression." },
+    { label: "Unlock Hell", href: "/progression/unlock-hell/", text: "Continue to the next difficulty gate." },
     { label: "Mandatory Quests", href: "/quests/mandatory/", text: "Review possible quest gates." }
   ],
   sources: [
@@ -926,6 +993,126 @@ const unlockNightmare = pageFromMatrix("/progression/unlock-nightmare/", {
   ]
 });
 
+const unlockHell = pageFromMatrix("/progression/unlock-hell/", {
+  title: "Hero Siege Unlock Hell Guide - Season 10 Progression",
+  description:
+    "How to unlock Hell in Hero Siege Season 10, including Nightmare prerequisites, current progression checks, and what to do when Hell stays locked.",
+  eyebrow: "Progression How-To",
+  quickAnswer: [
+    "How to unlock Hell in Hero Siege Season 10: unlock Nightmare first by completing the current Normal campaign route, then clear the current Nightmare progression path before checking Hell in the difficulty selection UI.",
+    "Official Season 10 notes support the broad chain - Normal completion opens Nightmare, Nightmare is the layer before Hell, and Hell sits above Nightmare. Current community progression walkthroughs identify the Nightmare Cthulhu clear as the practical Hell unlock milestone, but the exact in-game trigger wording still needs direct client verification.",
+    "If Hell is still locked, re-check Nightmare completion, final boss or quest credit, same-character progression state, party credit, quest-log state, and whether the guide you followed was written before Season 10 changed difficulty progression."
+  ],
+  sections: [
+    {
+      eyebrow: "Direct Answer",
+      title: "How to unlock Hell in Hero Siege Season 10",
+      bullets: [
+        "First unlock Nightmare by clearing the Season 10 Normal campaign route through Act 9.",
+        "Enter Nightmare on the character that needs Hell access.",
+        "Progress through the current Nightmare route instead of replaying an old pre-Season-10 difficulty checklist.",
+        "Clear the end-of-Nightmare milestone. Current community walkthroughs point to Cthulhu in the Abyssal Realm as the practical check, but the exact final quest hand-in should be verified in-game.",
+        "Return to the difficulty selection UI and confirm whether Hell is now available."
+      ]
+    },
+    {
+      eyebrow: "Progression Chain",
+      title: "Normal -> Nightmare -> Hell",
+      paragraphs: [
+        "Season 10 changed how difficulty progression should be read. Official notes say players progress through the Acts once on Normal, then move into Nightmare while retaining Normal waypoints. They also describe Nightmare as roughly replacing the older Hell 1 range and Hell as roughly replacing the older Hell 4.5 range.",
+        "For players, the practical chain is simple: clear the Normal campaign, unlock Nightmare, clear the current Nightmare milestone, then check Hell. This page avoids naming an exact level, hidden flag, or boss HP value because those details are not confirmed by the reviewed official notes."
+      ]
+    },
+    {
+      eyebrow: "Prerequisites",
+      title: "What should be true before Hell unlocks",
+      cards: [
+        {
+          title: "Nightmare is already unlocked",
+          text: "If Nightmare is still locked, use the Unlock Nightmare guide first.",
+          href: "/progression/unlock-nightmare/"
+        },
+        {
+          title: "Act 9 is complete on Normal",
+          text: "Act 9 is the current end of the Normal campaign route and the bridge into post-Normal difficulty progression.",
+          href: "/act-9/"
+        },
+        {
+          title: "Nightmare progress is complete",
+          text: "Hell should be treated as the next difficulty layer after the current Nightmare clear, not as an early campaign setting."
+        }
+      ]
+    },
+    {
+      eyebrow: "Troubleshooting",
+      title: "Why Hell may still be locked",
+      bullets: [
+        "Nightmare was unlocked, but the Nightmare route is not actually complete on this character.",
+        "The final boss kill or quest hand-in did not give credit because of party, instance, or patch-state behavior.",
+        "You are checking an older character, seasonal state, or account state that does not match the character that cleared Nightmare.",
+        "You followed a pre-Season-10 guide that describes older Hell gates or repeated act clears.",
+        "You are looking for a fixed level requirement, but the reviewed official Season 10 notes do not publish one as the Hell unlock rule."
+      ]
+    },
+    {
+      eyebrow: "Old Guide Filter",
+      title: "Which Hell unlock advice is probably outdated",
+      bullets: [
+        "It ignores Act 9 or treats Act 9 as unrelated to difficulty progression.",
+        "It tells you to repeat every act on every old difficulty layer before checking Hell.",
+        "It gives exact boss HP, level gates, or hidden flags without a current Season 10 source.",
+        "It uses older Hell numbering language without explaining that Season 10 reshaped the difficulty ladder."
+      ]
+    },
+    {
+      eyebrow: "FAQ",
+      title: "Unlock Hell FAQ",
+      cards: [
+        {
+          title: "How do you unlock Hell difficulty in Hero Siege?",
+          text: "In Season 10, unlock Nightmare first, then complete the current Nightmare progression path and check Hell in the difficulty UI. Exact final trigger wording should be verified in-game."
+        },
+        {
+          title: "Do you need to finish Nightmare to unlock Hell?",
+          text: "Yes, that is the current practical rule. Hell comes after Nightmare in the Season 10 difficulty chain."
+        },
+        {
+          title: "What level should I be before entering Hell?",
+          text: "The reviewed official Season 10 notes do not publish a fixed level requirement. Treat level and gear as power checks, not a confirmed hidden unlock number."
+        },
+        {
+          title: "Why is Hell difficulty still locked?",
+          text: "Most cases should first be checked against Nightmare completion, final boss or quest credit, party credit, same-character progression, and old guide assumptions."
+        },
+        {
+          title: "What comes after Nightmare in Hero Siege?",
+          text: "Hell is the next major difficulty layer after Nightmare. Later progression also connects into Hell+, Ether quests, Ether Tree planning, and endgame farming."
+        }
+      ]
+    }
+  ],
+  relatedGuides: [
+    { label: "Unlock Nightmare", href: "/progression/unlock-nightmare/", text: "Start here if Nightmare is not open yet." },
+    { label: "Act 9 Guide", href: "/act-9/", text: "Check the Normal campaign bridge into difficulty progression." },
+    { label: "Season 10 Overview", href: "/season-10/", text: "Review current-version progression context." },
+    { label: "Guide Hub", href: "/guide/", text: "Return to the site guide path." },
+    { label: "How to Get Ether Points", href: "/systems/ether-points/", text: "Use this after Hell+ systems become relevant." }
+  ],
+  sources: [
+    officialSources.steamAnnouncements,
+    officialSources.season10PatchSheet,
+    officialSources.hstrackerSeason10,
+    officialSources.tposeUnlockHell,
+    officialSources.vortexSeason10Progression,
+    officialSources.inGameVerification,
+    officialSources.communityCrossCheck
+  ],
+  needsManualReview: [
+    "Exact in-game Hell unlock prompt or quest hand-in wording after the Nightmare final milestone.",
+    "Whether party credit, instance changes, seasonal state, or missed turn-ins can prevent Hell from unlocking after a Nightmare clear.",
+    "Any fixed level requirement for entering Hell if the current client displays one, because the reviewed official notes do not publish it as the unlock rule."
+  ]
+});
 const soulforgedRing = pageFromMatrix("/quests/soulforged-ring/", {
   title: "Hero Siege Soulforged Ring - Quest and Reward Guide",
   description:
@@ -1201,18 +1388,19 @@ const etherPoints = pageFromMatrix("/systems/ether-points/", {
     "How to get Ether Points in Hero Siege, unlock Ether Tree points, understand level and Hell+ requirements, and fix common missing-point confusion.",
   eyebrow: "Ether Points Guide",
   quickAnswer: [
-    "To get Ether Points, reach the post-campaign progression layer, get to level 100, enter the Hell+ stage where Ether quests become relevant, complete the Ether quests shown in the Quest Log, and spend the points in the Ether Tree.",
+    "How to get Ether Points in Hero Siege: reach level 100, move into the Hell+ progression layer where Ether quests become relevant, complete the Ether quests shown in the Quest Log, and spend the earned points in the Ether Tree.",
     "Season 10 strengthened the Ether system with more than 100 Ether Tree nodes and hotfix visibility for completed and uncompleted Ether quests in the pause-menu Quest Log on Hell+.",
-    "If you do not see Ether Points, first check level, difficulty, Quest Log state, whether you are looking at the Ether Tree rather than the Incarnation Tree, and whether the exact point amount in your guide predates later Season 10 hotfixes."
+    "If Ether Points or Ether Tree quests are not visible, first check whether you have actually reached the right difficulty layer, then confirm level, Quest Log state, spent points, and whether your guide predates Season 10 hotfixes."
   ],
   sections: [
     {
       eyebrow: "How To Get Points",
       title: "How to get Ether Points in Hero Siege",
       bullets: [
-        "Finish enough progression to move beyond early Normal campaign play; Ether Points are not an early leveling resource.",
+        "Finish the current campaign and difficulty progression far enough to move beyond early Normal or Nightmare play; Ether Points are not an early leveling resource.",
         "Reach level 100, which current community guides and developer-announcement mirrors identify as the start of Ether visibility or starter points.",
-        "Move into Hell+ content where Ether quests are expected to appear. Season 10 patch notes specifically mention Ether quest status in the pause-menu Quest Log on Hell+.",
+        "Move into Hell+ content where Ether quests are expected to appear. If Hell is still locked, resolve the Nightmare -> Hell unlock path first.",
+        "Use the pause-menu Quest Log on Hell+; Season 10 notes specifically mention visibility for completed and uncompleted Ether quests there.",
         "Complete the visible Ether quests for your current difficulty or progression state.",
         "Spend the earned points in the Ether Tree, then re-check your tree before assuming points are missing."
       ]
@@ -1223,6 +1411,27 @@ const etherPoints = pageFromMatrix("/systems/ether-points/", {
       paragraphs: [
         "Players often search for Ether Tree points and Ether Points as the same thing. In practical terms, Ether Points are the points you spend in the Ether Tree; the tree is the interface and progression layer where those points matter.",
         "The Incarnation Tree is related endgame progression, but it is not the same tree. Season 10 added more than 600 Incarnation nodes and more than 100 Ether Tree nodes, so mixing the two systems is an easy way to misread a guide."
+      ]
+    },
+    {
+      eyebrow: "Progression Path",
+      title: "Before you chase Ether Points",
+      cards: [
+        {
+          title: "Current guide path",
+          text: "Start from the guide hub if you are not sure which progression step you missed.",
+          href: "/guide/"
+        },
+        {
+          title: "Season 10 campaign context",
+          text: "Use the Season 10 page to understand why old Ether and difficulty advice can be misleading.",
+          href: "/season-10/"
+        },
+        {
+          title: "Unlock Hell first",
+          text: "Ether quest visibility is tied to Hell+ context, so solve the Hell unlock before troubleshooting missing Ether quests.",
+          href: "/progression/unlock-hell/"
+        }
       ]
     },
     {
@@ -1289,9 +1498,11 @@ const etherPoints = pageFromMatrix("/systems/ether-points/", {
   relatedGuides: [
     { label: "Guide Hub", href: "/guide/", text: "Return to the guide index." },
     { label: "Season 10 Overview", href: "/season-10/", text: "Review current-version progression context." },
+    { label: "Act 9 Guide", href: "/act-9/", text: "Check campaign progression context." },
+    { label: "Unlock Nightmare", href: "/progression/unlock-nightmare/", text: "Confirm the first difficulty unlock step." },
+    { label: "Unlock Hell", href: "/progression/unlock-hell/", text: "Resolve Hell access before troubleshooting Hell+ Ether quests." },
     { label: "Enchanted Sigil", href: "/items/enchanted-sigil/", text: "Check item and crafting economy context." },
-    { label: "Mevius Guide", href: "/bosses/mevius/", text: "Check a boss progression page." },
-    { label: "Act 9 Guide", href: "/act-9/", text: "Check campaign progression context." }
+    { label: "Mevius Guide", href: "/bosses/mevius/", text: "Check a boss progression page." }
   ],
   sources: [
     officialSources.season10PatchSheet,
@@ -1538,6 +1749,7 @@ export const guidePages = [
   act9,
   mandatoryQuests,
   unlockNightmare,
+  unlockHell,
   soulforgedRing,
   crowsFeather,
   mercenary,

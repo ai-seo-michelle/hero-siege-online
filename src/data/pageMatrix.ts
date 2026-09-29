@@ -139,15 +139,15 @@ export const pageMatrix: PageMatrixEntry[] = [
     launchDecision: "Phase 2",
   },
   {
-    page: "Hero Siege Unlock Hell",
+    page: "Hero Siege Unlock Hell in Season 10",
     route: "/progression/unlock-hell/",
-    keyword: "hero siege unlock hell",
+    keyword: "hero siege how to unlock hell",
     userQuestion: "How do I unlock Hell difficulty in Hero Siege Season 10?",
     pageType: "Progression / How-to",
     sourcePriority:
       "Official progression rules → in-game verification → current community reports",
-    priority: "P1",
-    launchDecision: "Phase 2",
+    priority: "P0",
+    launchDecision: "Launch",
   },
   {
     page: "Hero Siege Act 8 Guide",
